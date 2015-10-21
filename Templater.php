@@ -14,7 +14,7 @@ class Templater {
 	function set($tpl, $data, $res){
 		
 		// if file exists
-		if($tpl || file_exists($this->dir.$tpl.'.tpl')){
+		if($tpl OR file_exists($this->dir.$tpl.'.tpl')){
 			
 			// If this pattern is already in the variable that we will not receive it again
 			if(isset($this->get[$res]) and !$this->get[$res]) 
