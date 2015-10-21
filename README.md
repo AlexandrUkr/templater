@@ -1,2 +1,2 @@
-# templater
-php templater
+# php template class
+php template class
