@@ -9,7 +9,7 @@
 */
 class Templater {
 	
-	var $dir = '.', 								    // directory template
+	var $dir = '.', 								// directory template
 	    $data = [],								        // temp data
 	    $get = [];								        // data output
 	
