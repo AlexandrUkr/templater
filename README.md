@@ -3,6 +3,7 @@ Fast php template class
 
 Example of use:
 
+```php
 // declare class
 $tpl = new Templater;
 
@@ -18,3 +19,4 @@ $tpl->set("index", [
 
 // Output pattern
 $tpl->get['main'];
+```
