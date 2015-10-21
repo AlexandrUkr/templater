@@ -1,5 +1,5 @@
-# php template class
-php template class
+# Fast Templater
+Fast php template class
 
 Example of use:
 
