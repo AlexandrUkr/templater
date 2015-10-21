@@ -2,6 +2,8 @@
 /**
 * Appointment: Template Class
 * File: Templater.php
+* Engine: Fast Engine
+* URL: https://fast-engine.org/
 * Author: Alexandr Drozd
 * Email: alexandr1drozd@gmail.com
 */
