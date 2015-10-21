@@ -18,5 +18,5 @@ $tpl->set("index", [
 ], 'main');
 
 // Output pattern
-$tpl->get['main'];
+echo $tpl->get['main'];
 ```
