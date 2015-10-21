@@ -27,7 +27,7 @@ class Templater {
 			if(isset($this->get[$res]) and $this->get[$res]) $this->get[$res] .= $this->data[1];
 			else $this->get[$res] = $this->data[1];
 		} else
-			die("Файл шаблона отсутствует: ".$this->dir.$tpl.'.tpl');
+			die("No template file: ".$this->dir.$tpl.'.tpl');
 	}
 	
 	// Clear the template variables
