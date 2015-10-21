@@ -1,14 +1,15 @@
 <?php
 /**
-*	Appointment: Template Class
-*	File: Templater.php
-*	Author: Alexandr Drozd
+* Appointment: Template Class
+* File: Templater.php
+* Author: Alexandr Drozd
+* Email: alexandr1drozd@gmail.com
 */
 class Templater {
 	
 	var $dir = '.', 								    // directory template
-		$data = [],								    // temp data
-		$get = [];								    // data output
+	    $data = [],								            // temp data
+	    $get = [];								            // data output
 	
 	function set($tpl, $data, $res){
 		
