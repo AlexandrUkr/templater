@@ -11,24 +11,30 @@
 class Templater {
 	
 	var $dir = '.',
-	    $data = [],
-	    $get = [];
+	    $temp = array(),
+	    $get = array();
 	
-	function set($tpl, $data, $res, $cache = true){
+	public function set($tpl, $data, $blocks = false, $res = 'main', $cache = true){
 		
 		if($tpl OR file_exists($this->dir.$tpl.'.tpl')){
 			
 			if(!$cache OR !$this->get[$res])
-				$this->data[0] = file_get_contents($this->dir.$tpl.'.tpl');
+				$this->temp[$res] = file_get_contents($this->dir.$tpl.'.tpl');
 			
-			$this->data[1] = str_replace(array_keys($data), array_values($data), $this->data[0]);
-			
+			$temp = str_replace(array_keys($data), array_values($data), $this->temp[$res]);
+
+	            	if (is_array($blocks)){
+	                    foreach ($blocks as $key => $value) {
+	                        $temp = preg_replace("#\\[".$key."\\](.*?)\\[/".$key."\\]#is", $value ? "$1" : "", $temp);
+	                    }
+	                }
+	                
 			if(isset($this->get[$res]) and $this->get[$res])
-				$this->get[$res] .= $this->data[1];
+				$this->get[$res] .= $temp;
 			else
-				$this->get[$res] = $this->data[1];
+				$this->get[$res] = $temp;
 			
-			return $this->data[1];
+			return $temp;
 			
 		} else
 			die("No template file: ".$this->dir.$tpl.'.tpl');
