@@ -2,7 +2,6 @@
 Fast php template class
 
 # 1 Метод
-<hr>
 <b>Содержимое файла index.php :</b>
 ```php
 
@@ -41,7 +40,6 @@ echo $tpl->set("index", array(
 <p>Test-output3</p>
 
 # 2 Метод
-<hr>
 <b>Содержимое файла index.php :</b>
 ```php
 
@@ -87,7 +85,6 @@ echo $tpl->set("index", array(
 <p>Test-output3</p>
 
 # 3 Метод
-<hr>
 <b>Содержимое файла index.php :</b>
 ```php
 
