@@ -20,7 +20,7 @@ class Templater {
 		if($type) $this->type = $type;
 	}
 	
-	public function set($tpl, $data, $blocks = false, $res = 'main', $cache = true){
+	public function compile($tpl, $data, $blocks = false, $res = 'main', $cache = true){
 		
 		if($tpl OR file_exists($this->dir.$tpl.$this->type)){
 			if(!$cache OR !$this->get[$res])
