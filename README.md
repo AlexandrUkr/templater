@@ -12,7 +12,7 @@ include __DIR__ .'/Templater.php';
 $tpl = new Templater('/templates/', '.tpl');
 
 // Компилируем и выводим в браузер
-echo $tpl->set("index", array(
+echo $tpl->compile("index", array(
   '{test-output}' => 'Test-output',
   '{test-output2}' => 'Test-output2',
   '{test-output3}' => 'Test-output3',
@@ -53,7 +53,7 @@ include __DIR__ .'/Templater.php';
 $tpl = new Templater('/templates/', '.tpl');
 
 // Компилируем и выводим в браузер
-echo $tpl->set("index", array(
+echo $tpl->compile("index", array(
   '{test-output}' => 'Test-output',
   '{test-output2}' => 'Test-output2',
   '{test-output3}' => 'Test-output3',
@@ -98,12 +98,12 @@ include __DIR__ .'/Templater.php';
 $tpl = new Templater('/templates/', '.tpl');
 
 // Компилируем шаблон page
-$tpl->set("page", array(
+$tpl->compile("page", array(
   '{test}' => 'Скомпилирована',
 ), false, 'page');
 
 // Компилируем и выводим в браузер
-echo $tpl->set("index", array(
+echo $tpl->compile("index", array(
   '{test-output}' => 'Test-output',
   '{test-output2}' => 'Test-output2',
   '{test-output3}' => 'Test-output3',
