@@ -35,7 +35,7 @@ echo $tpl->set("index", array(
 </html>
 ```
 
-# Браузер
+<b>Браузер</b>
 <p>Test-output</p>
 <p>Test-output2</p>
 <p>Test-output3</p>
@@ -80,7 +80,7 @@ echo $tpl->set("index", array(
 </html>
 ```
 
-# Браузер
+<b>Браузер</b>
 <p>Я админ</p>
 <p>Test-output</p>
 <p>Test-output2</p>
@@ -137,7 +137,7 @@ echo $tpl->set("index", array(
 </html>
 ```
 
-# Браузер
+<b>Браузер</b>
 <p>Подстраница Скомпилирована</p>
 <p>Я админ</p>
 <p>Test-output</p>
