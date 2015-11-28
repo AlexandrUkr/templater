@@ -1,22 +1,41 @@
 # Fast Templater
 Fast php template class
-
-Example of use:
-
+#  Обьявляем класс
 ```php
-// declare class
-$tpl = new Templater;
+include __DIR__ .'/Templater.php';
+$tpl = new Templater('/templates/', '.tpl');
+```
+# Простой пример
 
-// Directory template
-$tpl->dir = '/template/';
+Содержимое файла index.php :
+```php
+include __DIR__ .'/Templater.php';
+$tpl = new Templater('/templates/', '.tpl');
 
-// Add template
-$tpl->set("index", [
+// Компилируем и выводим в браузер
+echo $tpl->set("index", array(
   '{test-output}' => 'Test-output',
   '{test-output2}' => 'Test-output2',
   '{test-output3}' => 'Test-output3',
-], 'main');
-
-// Output pattern
-echo $tpl->get['main'];
+));
 ```
+
+Содержимое файла /templates/index.tpl :
+```html
+<DOCTYPE html>
+<html>
+ <head>
+   <meta charset="utf-8">
+ </head>
+ <body>
+   <p>{test-output}</p>
+   <p>{test-output2}</p>
+   <p>{test-output3}</p>
+ </body>
+</html>
+```
+
+# Браузер
+<p>Test-output</p>
+<p>Test-output2</p>
+<p>Test-output3</p>
