@@ -2,8 +2,8 @@
 Fast php template class
 
 # 1 Метод
-
-Содержимое файла index.php :
+<hr>
+<b>Содержимое файла index.php :</b>
 ```php
 
 // Инклудим класс шаблонизатора
@@ -20,7 +20,7 @@ echo $tpl->set("index", array(
 ));
 ```
 
-Содержимое файла /templates/index.tpl :
+<b>Содержимое файла /templates/index.tpl :</b>
 ```html
 <DOCTYPE html>
 <html>
@@ -41,8 +41,8 @@ echo $tpl->set("index", array(
 <p>Test-output3</p>
 
 # 2 Метод
-
-Содержимое файла index.php :
+<hr>
+<b>Содержимое файла index.php :</b>
 ```php
 
 // Обратите внимание что переменная равна true
@@ -64,7 +64,7 @@ echo $tpl->set("index", array(
 ));
 ```
 
-Содержимое файла /templates/index.tpl :
+<b>Содержимое файла /templates/index.tpl :</b>
 ```html
 <DOCTYPE html>
 <html>
@@ -87,7 +87,8 @@ echo $tpl->set("index", array(
 <p>Test-output3</p>
 
 # 3 Метод
-Содержимое файла index.php :
+<hr>
+<b>Содержимое файла index.php :</b>
 ```php
 
 // Обратите внимание что переменная равна true
@@ -115,12 +116,12 @@ echo $tpl->set("index", array(
 ));
 ```
 
-Содержимое файла /templates/page.tpl :
+<b>Содержимое файла /templates/page.tpl :</b>
 ```html
 Подстраница {test}
 ```
 
-Содержимое файла /templates/index.tpl :
+<b>Содержимое файла /templates/index.tpl :</b>
 ```html
 <DOCTYPE html>
 <html>
